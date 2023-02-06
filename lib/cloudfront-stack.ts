@@ -24,6 +24,7 @@ export class CloudFrontStack extends cdk.Stack {
           [props.wafRestApiOriginVerifyHeader]:
             props.wafRestApiOriginVerifyHeaderValue,
         },
+        originPath: `/${props.restApi.deploymentStage.stageName}`,
         originSslProtocols: [cdk.aws_cloudfront.OriginSslPolicy.TLS_V1_2],
         protocolPolicy: cdk.aws_cloudfront.OriginProtocolPolicy.HTTPS_ONLY,
       }
@@ -42,7 +43,7 @@ export class CloudFrontStack extends cdk.Stack {
             cdk.aws_cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         },
         additionalBehaviors: {
-          "prod/*": {
+          "api/*": {
             origin: apiOrigin,
             allowedMethods: cdk.aws_cloudfront.AllowedMethods.ALLOW_ALL,
             cachePolicy: cdk.aws_cloudfront.CachePolicy.CACHING_DISABLED,
