@@ -9,6 +9,8 @@ CDK example of:
 
 Final Architecture:
 
+![](./docs/final-architecture.png)
+
 Extra resources:
 
 - [Prevent requests from accessing API directly](https://www.wellarchitectedlabs.com/security/300_labs/300_multilayered_api_security_with_cognito_and_waf/3_prevent_requests_from_accessing_api_directly/)
