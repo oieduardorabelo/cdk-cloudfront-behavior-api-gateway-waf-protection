@@ -12,7 +12,9 @@ export class S3Stack extends cdk.Stack {
     // S3 Bucket for static assets and images
     //
     // ========================================
-    const bucketAssets = new cdk.aws_s3.Bucket(this, "somebucket");
+    const bucketAssets = new cdk.aws_s3.Bucket(this, "somebucket", {
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+    });
 
     this.bucketAssets = bucketAssets;
   }
