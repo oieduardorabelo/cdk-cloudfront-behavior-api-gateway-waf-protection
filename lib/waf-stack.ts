@@ -78,7 +78,7 @@ export class WafStack extends cdk.Stack {
             byteMatchStatement: {
               fieldToMatch: {
                 singleHeader: {
-                  name: WAF_REST_API_ORIGIN_VERIFY_HEADER,
+                  Name: WAF_REST_API_ORIGIN_VERIFY_HEADER,
                 },
               },
               positionalConstraint: "EXACTLY",
