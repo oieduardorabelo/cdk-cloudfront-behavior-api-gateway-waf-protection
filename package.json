@@ -1,5 +1,5 @@
 {
-  "name": "cdk-cloudfront-behavior-api-gateway",
+  "name": "cdk-cloudfront-behavior-api-gateway-waf-protection",
   "version": "0.1.0",
   "bin": {
     "infra": "bin/infra.js"
